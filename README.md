@@ -1,6 +1,5 @@
-# Team Nishtha — AI-Powered Integrated Bid Compliance Verification Platform for GeM
+ AI-Powered Integrated Bid Compliance Verification Platform for GeM
 
-A working SIH 2026 prototype for **PS ID SIH26100**.
 
 ## What this prototype demonstrates
 
