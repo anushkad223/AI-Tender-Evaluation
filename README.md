@@ -1,66 +1,42 @@
-#AI-Powered Integrated Bid Compliance Verification Platform for GeM
+# AI-Powered Integrated Bid Compliance Verification Platform for GeM
 
+> A prototype for faster, transparent, and evidence-based tender and bid compliance verification.
 
-## What this prototype demonstrates
+## What This Prototype Demonstrates
 
-- Tender + bidder document upload
-- PDF text extraction with PyMuPDF
-- Requirement extraction using deterministic NLP/regex heuristics
-- Rule-based compliance verification
-- Evidence snippets linked to source documents
-- Risk detection for missing/non-compliant/inconsistent items
-- Bidder comparison
-- Human-in-the-loop officer review
-- Audit trail
-- JSON/CSV-style report download from the UI
-- No API key required for the demo
+This prototype streamlines the bid evaluation workflow by bringing tender requirements, bidder submissions, compliance checks, evidence, risks, and officer review into a single platform.
 
-## Stack
+### Core Capabilities
 
-- Frontend: React + Vite + TypeScript + React Router + CSS
-- Backend: Python + FastAPI + PyMuPDF
-- Prototype database: SQLite
-- Designed to map to the SIH PPT architecture: React/Vite/TypeScript, FastAPI, document processing, AI + rules, RBAC/audit concepts.
+- Tender + Bidder Document Upload
+- PDF Text Extraction using PyMuPDF
+- Requirement Extraction using deterministic NLP and regex heuristics
+- Rule-Based Compliance Verification
+- Evidence Snippets linked to source documents
+- Risk Detection for missing, non-compliant, and inconsistent items
+- Bidder Comparison
+- Human-in-the-Loop Officer Review
+- Audit Trail  
+- JSON/CSV-Style Report Download directly from the UI
+- No API Key Required for the current demo
 
-## Run
+---
 
-### Backend
-```bash
-cd backend
-python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# macOS/Linux:
-# source .venv/bin/activate
+## How It Works
 
-pip install -r requirements.txt
-uvicorn app:app --reload --port 8000
-```
-
-### Frontend
-Open another terminal:
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open the Vite URL shown in the terminal, normally http://localhost:5173.
-
-## Demo flow
-
-1. Open Dashboard.
-2. Go to **New Evaluation**.
-3. Upload one tender PDF and two bidder PDFs.
-4. Click **Analyze Bids**.
-5. Review requirements, evidence, compliance, risks and bidder comparison.
-6. Open a bidder to make officer decisions.
-7. Download the audit-ready report.
-
-## Demo data
-
-`sample-data/` contains simple text PDFs you can use immediately.
-
-## Important
-
-This is a prototype. Production GeM integration, government authentication, real LLM inference, OCR for scanned PDFs, pgvector, Supabase Auth/RBAC, and digital signatures should be connected after validation and security review.
+```text
+Tender & Bidder Documents
+          ↓
+     PDF Processing
+          ↓
+  Requirement Extraction
+          ↓
+ Compliance Verification
+          ↓
+ Evidence & Risk Detection
+          ↓
+    Bidder Comparison
+          ↓
+   Officer Review
+          ↓
+     Final Report
